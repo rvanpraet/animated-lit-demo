@@ -4,58 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Lit Card Demo</title>
+    <title>Animated Lit App</title>
     <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="./src/components/hero-landing/hero-landing.ts"></script>
     <script type="module" src="./src/components/animated-card/animated-card.ts"></script>
     <style>
       body {
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        background-color: #f9fafb;
         margin: 0;
-        padding: 40px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      h1 {
-        margin-bottom: 40px;
-        color: #111827;
-      }
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 32px;
-        width: 100%;
-        max-width: 1200px;
+        padding: 0;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
       }
     </style>
   </head>
   <body>
-    <h1>Animated Lit Cards</h1>
-    
-    <div class="card-grid">
+    <hero-landing title="Experience the Future">
       <animated-card
-        title="Getting Started"
-        subtitle="Step 1"
-        content="Welcome to the animated card demo. This card is built with Lit and TypeScript."
+        title="Performance"
+        subtitle="WebGL Powered"
+        content="Leveraging the GPU for smooth background animations."
       ></animated-card>
 
       <animated-card
-        title="Customization"
-        subtitle="Step 2"
-        content="You can easily customize the title, subtitle, and content via properties."
+        title="Animation"
+        subtitle="GSAP Integrated"
+        content="Complex timelines managed easily with GreenSock."
       ></animated-card>
 
       <animated-card
-        title="Hover Effect"
-        subtitle="Interaction"
-        content="Hover over these cards to see the translation and shadow effect defined in SCSS."
-      >
-        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-          <small>✨ This extra content is projected via slots!</small>
-        </div>
-      </animated-card>
-    </div>
+        title="Simplicity"
+        subtitle="Lightweight Web Components"
+        content="Built with lightweight web components standard."
+      ></animated-card>
+    </hero-landing>
   </body>
 </html>

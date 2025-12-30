@@ -1,15 +1,39 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import styles from './animated-card.scss?inline';
+import styles from '../../styles/animated-card.scss?inline';
 
+/**
+ * AnimatedCard Component
+ *
+ * A reusable card component that displays a title, subtitle, and content.
+ * It features hover effects defined in the associated SCSS.
+ *
+ * @element animated-card
+ *
+ * @slot - Optional slot for additional content (e.g., buttons, extra text) at the bottom of the card body.
+ */
 @customElement('animated-card')
 export class AnimatedCard extends LitElement {
   static styles = css`${unsafeCSS(styles)}`;
 
+  /**
+   * The primary heading of the card.
+   */
   @property({ type: String }) title = '';
+
+  /**
+   * A secondary heading or category label.
+   */
   @property({ type: String }) subtitle = '';
+
+  /**
+   * The main text content of the card.
+   */
   @property({ type: String }) content = '';
 
+  /**
+   * Renders the card structure.
+   */
   render() {
     return html`
       <div class="animated-card">

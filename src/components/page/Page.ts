@@ -1,7 +1,7 @@
 import { html } from 'lit';
 
-import { Header } from './Header';
-import './page.css';
+import { Header } from '../header/Header';
+import '../../styles/page.css';
 
 type User = {
   name: string;
