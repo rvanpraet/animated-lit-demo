@@ -1,51 +1,88 @@
-import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { html } from 'lit';
+import '../components/button/button';
 
-import { fn } from 'storybook/test';
-import { Button, type ButtonProps } from '../components/button/Button';
-
-
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-const meta = {
-  title: 'Example/Button',
+const meta: Meta = {
+  title: 'Components/Button',
+  component: 'app-button',
   tags: ['autodocs'],
-  render: (args) => Button(args),
   argTypes: {
-    backgroundColor: { control: 'color' },
+    variant: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary'],
+    },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
     },
+    disabled: { control: 'boolean' },
   },
-  args: { onClick: fn() },
-} satisfies Meta<ButtonProps>;
+  args: {
+    variant: 'primary',
+    size: 'medium',
+    disabled: false,
+  },
+};
 
 export default meta;
-type Story = StoryObj<ButtonProps>;
+type Story = StoryObj;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: 'primary',
   },
+  render: (args) => html`
+    <app-button 
+      .variant=${args.variant}
+      .size=${args.size}
+      ?disabled=${args.disabled}
+    >
+      Primary Action
+    </app-button>
+  `,
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    variant: 'secondary',
   },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
+  render: (args) => html`
+    <app-button 
+      .variant=${args.variant}
+      .size=${args.size}
+      ?disabled=${args.disabled}
+    >
+      Secondary Action
+    </app-button>
+  `,
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
   },
+  render: (args) => html`
+    <app-button 
+      .variant=${args.variant}
+      .size=${args.size}
+      ?disabled=${args.disabled}
+    >
+      Small Button
+    </app-button>
+  `,
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+  },
+  render: (args) => html`
+    <app-button 
+      .variant=${args.variant}
+      .size=${args.size}
+      ?disabled=${args.disabled}
+    >
+      Large Button
+    </app-button>
+  `,
 };

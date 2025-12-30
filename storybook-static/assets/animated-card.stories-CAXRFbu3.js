@@ -1,4 +1,4 @@
-import{b as o}from"./iframe-BA5hLr_w.js";import"./animated-card-3W21kkC6.js";import"./preload-helper-PPVm8Dsz.js";const s={title:"Components/AnimatedCard",component:"animated-card",tags:["autodocs"],argTypes:{title:{control:"text"},subtitle:{control:"text"},content:{control:"text"}},args:{title:"Hello World",subtitle:"A simple subtitle",content:"This is the default content for the animated card."}},e={render:t=>o`
+import{b as o}from"./iframe-YI3ivEqr.js";import"./animated-card-DBdOMp34.js";import"./preload-helper-PPVm8Dsz.js";import"./property-C4ojN_2n.js";const d={title:"Components/AnimatedCard",component:"animated-card",tags:["autodocs"],argTypes:{title:{control:"text"},subtitle:{control:"text"},content:{control:"text"}},args:{title:"Hello World",subtitle:"A simple subtitle",content:"This is the default content for the animated card."}},e={render:t=>o`
     <animated-card
       .title=${t.title}
       .subtitle=${t.subtitle}
@@ -45,4 +45,4 @@ import{b as o}from"./iframe-BA5hLr_w.js";import"./animated-card-3W21kkC6.js";imp
     subtitle: 'Demonstrating slots',
     content: 'The main content is property-based.'
   }
-}`,...n.parameters?.docs?.source}}};const d=["Default","WithSlotContent"];export{e as Default,n as WithSlotContent,d as __namedExportsOrder,s as default};
+}`,...n.parameters?.docs?.source}}};const l=["Default","WithSlotContent"];export{e as Default,n as WithSlotContent,l as __namedExportsOrder,d as default};
