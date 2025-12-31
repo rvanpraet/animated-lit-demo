@@ -3,7 +3,7 @@ import { html } from 'lit';
 import '../components/button/button';
 
 const meta: Meta = {
-  title: 'Components/Button',
+  title: 'Components/UI Blocks/Button',
   component: 'app-button',
   tags: ['autodocs'],
   argTypes: {

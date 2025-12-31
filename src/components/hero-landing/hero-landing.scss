@@ -52,7 +52,7 @@
        but since they are in light DOM, we rely on the slot container */
     ::slotted(*) {
       opacity: 0; /* Hidden initially for GSAP */
-      transform: translateY(20px);
+      transform: translateY(40px);
     }
   }
 }

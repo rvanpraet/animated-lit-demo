@@ -4,7 +4,7 @@ import '../components/hero-landing/hero-landing';
 import '../components/animated-card/animated-card';
 
 const meta: Meta = {
-  title: 'Components/HeroLanding',
+  title: 'Components/Sections/HeroLanding',
   component: 'hero-landing',
   tags: ['autodocs'],
   argTypes: {

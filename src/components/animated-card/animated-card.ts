@@ -1,6 +1,6 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import styles from '../../styles/animated-card.scss?inline';
+import styles from './animated-card.scss?inline';
 
 /**
  * AnimatedCard Component

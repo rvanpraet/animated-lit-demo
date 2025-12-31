@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 import '../components/animated-card/animated-card';
+import '../components/button/button';
 
 const meta: Meta = {
-  title: 'Components/AnimatedCard',
+  title: 'Components/Composite/AnimatedCard',
   component: 'animated-card',
   tags: ['autodocs'],
   argTypes: {
@@ -42,7 +43,11 @@ export const WithSlotContent: Story = {
       <div style="margin-top: 1rem; padding: 0.5rem; background: #f3f4f6; border-radius: 4px;">
         <strong>Extra Content via Slot:</strong>
         <p>This content is injected via the default slot.</p>
-        <button style="margin-top: 8px; padding: 4px 8px; cursor: pointer;">Action</button>
+        <p>The button is slotted content and a custom component from this library.</p>
+        <app-button
+          variant="primary"
+          size="small"
+        >Action</app-button>
       </div>
     </animated-card>
   `,

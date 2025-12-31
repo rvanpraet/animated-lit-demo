@@ -1,7 +1,7 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import gsap from 'gsap';
-import styles from '../../styles/hero-landing.scss?inline';
+import styles from './hero-landing.scss?inline';
 import vertShaderSource from '../../shaders/gradient.vert?raw';
 import fragShaderSource from '../../shaders/gradient.frag?raw';
 
@@ -27,7 +27,7 @@ export class HeroLanding extends LitElement {
    */
   @property({ type: String }) title = 'Welcome';
 
-  @query('canvas') canvas!: HTMLCanvasElement;
+  @query('.hero-landing__background') canvas!: HTMLCanvasElement;
   @query('.hero-landing__title') titleElement!: HTMLElement;
   @query('slot') slotElement!: HTMLSlotElement;
 
@@ -81,7 +81,7 @@ export class HeroLanding extends LitElement {
     gsap.to(this.titleElement, {
       opacity: 1,
       x: 0,
-      duration: 1.2,
+      duration: 1,
       ease: 'power3.out',
       delay: 0.2
     });
